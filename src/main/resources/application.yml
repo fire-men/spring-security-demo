@@ -1,0 +1,54 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: spring-security
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://rm-uf6ek21ezr152ems6yo.mysql.rds.aliyuncs.com:3306/sa-token?useUnicode=true&characterEncoding=utf-8&allowPublicKeyRetrieval=true
+    username: zl
+    password: Zl123456
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    banner: false
+    db-config:
+      logic-delete-field: isDelete
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+knife4j:
+  enable: true
+  production: false
+  basic:
+    enable: false
+    username: zhangle
+    password: 123456
+
+security:
+  white-list:
+    # swagger白名单
+    - /favicon.ico
+    - /doc.html/**
+    - /doc.html#/**
+    - /webjars/**
+    - /swagger-resources/**
+    - /v3/api-docs/**
+    - /v2/**
+    - /swagger-ui.html/**
+    - /api/**
+    - /api-docs/**
+      # 业务系统白名单
+    - /user/login
+
+jwt:
+  secret: adjfkinl;djoen@jkajdfl%jdalf1!
+  expire-time: 1800000
+
+
