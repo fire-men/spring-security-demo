@@ -1,6 +1,6 @@
 # SpringSecurity详细使用教程  
 
-##技术栈
+## 技术栈
 - fluentMybatis
 - MybatisPlus
 - knife4j
